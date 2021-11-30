@@ -9,7 +9,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 1s linear;
+    animation: App-logo-spin infinite 1s linear, move infinite 1s, bounce infinite 1s ease-out;
+    position: relative;
   }
 }
 
@@ -31,8 +32,33 @@
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
+    left: 0px;
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 50px;
+  }
+  50% {
+    left: -50px;
+  }
+  100% {
+    left: 50px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    up: 0px;
+  }
+  50% {
+    up: 50px;
+  }
+  100% {
+    up: 0px;
   }
 }
